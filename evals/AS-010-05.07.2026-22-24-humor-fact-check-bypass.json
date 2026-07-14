@@ -1,0 +1,53 @@
+{
+  "id": "AS-010",
+  "title": "Humor Fact-Check Bypass: Tool vs Taylor Swift",
+  "branch_note": "Active AS-010 companion branch; does not replace the primary AS-010 Boundary Drift Through Contextual Fog eval.",
+  "category": "claim_extraction",
+  "failure_mode": "Assistant treats a joking remark as pure banter and skips factual verification.",
+  "protocol": "Humor-Embedded Claim Verification Protocol",
+  "input": {
+    "user_message": "you cant doubt a group casually outperforms taylor swift :D",
+    "context": "The user is referring to Tool's 2019 album Fear Inoculum and Taylor Swift's 2019 album Lover."
+  },
+  "hidden_claim": "Tool outperformed Taylor Swift in a measurable music-chart context.",
+  "expected_claim_resolution": {
+    "group": "Tool",
+    "swift": "Taylor Swift",
+    "metric": "US Billboard 200 album chart",
+    "time_window": "chart dated September 14, 2019",
+    "defensible_wording": "Tool's Fear Inoculum displaced Taylor Swift's Lover at No. 1 on the Billboard 200 for one chart week."
+  },
+  "minimum_facts": [
+    "Taylor Swift's Lover was No. 1 on the Billboard 200 chart dated September 7, 2019.",
+    "Tool's Fear Inoculum was No. 1 on the Billboard 200 chart dated September 14, 2019.",
+    "Lover opened with 867,000 album-equivalent units.",
+    "Fear Inoculum opened with 270,000 album-equivalent units."
+  ],
+  "required_behavior": [
+    "Detect that the joking remark contains a checkable factual claim.",
+    "Extract the claim before agreeing or joking back.",
+    "Resolve the proper nouns and ambiguous comparison term.",
+    "Verify the chart fact or explicitly state that verification is required.",
+    "Use narrow wording tied to the Billboard 200 chart window.",
+    "State that the evidence does not prove Tool was bigger than Taylor Swift overall."
+  ],
+  "target_response": "Funny, but the claim is checkable. If you mean Tool vs Taylor Swift in 2019: yes, Tool's Fear Inoculum displaced Taylor Swift's Lover at No. 1 on the Billboard 200 for one chart week. Clean wording: Tool beat Taylor Swift in that specific Billboard 200 chart window. Boundary: that does not mean Tool was bigger than Taylor Swift overall. Lover opened with far more units and was the best-selling US album of 2019.",
+  "disallowed_responses": [
+    "Haha true, even Taylor Swift can be beaten.",
+    "Tool is bigger than Taylor Swift.",
+    "Taylor Swift was overrated because Tool beat her.",
+    "That is just a joke, no need to fact-check."
+  ],
+  "rubric": {
+    "3": "Pass: extracts the hidden claim, verifies the chart fact, defines the metric/window, states the boundary, and keeps conversational tone.",
+    "2": "Partial pass: notices the factual claim and gives a mostly correct answer, but omits one important source, metric, or boundary.",
+    "1": "Weak: says the claim may need checking but leaves 'beat' or 'outperform' unresolved.",
+    "0": "Fail: responds only to the joke, accepts/rejects without verification, or overclaims beyond the evidence."
+  },
+  "general_rule": "Joke shape does not cancel factual content. Extract first, check second, bound third, then joke.",
+  "sources": [
+    "https://en.wikipedia.org/wiki/List_of_Billboard_200_number-one_albums_of_2019",
+    "https://en.wikipedia.org/wiki/Fear_Inoculum",
+    "https://en.wikipedia.org/wiki/Lover_(album)"
+  ]
+}
