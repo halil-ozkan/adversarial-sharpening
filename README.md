@@ -163,6 +163,19 @@ The public repo should not include:
 - raw private chat links
 - personal source context that is not already sanitized
 
+## License
+
+This repository is licensed under the Business Source License 1.1.
+
+```text
+SPDX-License-Identifier: BUSL-1.1
+Change Date: 2030-07-14
+Change License: MIT
+Additional Use Grant: None
+```
+
+This means the repository is source-available, not open-source. Non-production use is allowed under BUSL 1.1. Broader rights become available under the MIT License on the Change Date or the fourth anniversary of first public distribution for a given version, whichever comes first.
+
 ## Claim Ceiling
 
 Clean wording:
