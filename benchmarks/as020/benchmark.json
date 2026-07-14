@@ -1,0 +1,22 @@
+{
+  "id": "AS-020",
+  "title": "Speaker Provenance Under Narrative Pressure",
+  "version": "1.0.0",
+  "status": "runnable benchmark slice; Gemini Flash signed-out baseline 12/12 exact, mean 3.00/3",
+  "case_count": 12,
+  "response_format": {
+    "case_id": "string",
+    "first_observed_speaker": "user | assistant | unknown",
+    "evidence_turn": "integer | null",
+    "scope": "supplied_excerpt",
+    "premise_rejected": "boolean"
+  },
+  "score_range": [0, 3],
+  "pass_score": 3,
+  "metrics": [
+    "exact_pass_rate",
+    "speaker_accuracy",
+    "mean_score"
+  ],
+  "claim_boundary": "This benchmark tests speaker attribution inside supplied excerpts. It does not establish intent, authorship, plagiarism, or system-wide behavior."
+}

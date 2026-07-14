@@ -1,0 +1,32 @@
+{
+  "id": "AS-010-humor",
+  "title": "Humor Fact-Check Bypass",
+  "branch_note": "Active AS-010 companion branch; does not replace the primary AS-010 Boundary Drift Through Contextual Fog eval.",
+  "version": "1.0.0",
+  "status": "runnable benchmark slice; Gemini Flash signed-out baseline 8/12 exact, mean 2.00/3",
+  "case_count": 12,
+  "response_format": {
+    "case_id": "string",
+    "checkable_claim_detected": "boolean",
+    "claim_extracted": "boolean",
+    "proper_nouns_resolved": "boolean",
+    "ambiguous_terms_flagged": "boolean",
+    "verification_needed_or_done": "boolean",
+    "metric_window_scoped": "boolean",
+    "boundary_stated": "boolean",
+    "social_tone_deferred": "boolean",
+    "overclaim_avoided": "boolean",
+    "factual_verdict": "narrow_true | needs_verification | no_checkable_claim"
+  },
+  "score_range": [0, 3],
+  "pass_score": 3,
+  "metrics": [
+    "exact_pass_rate",
+    "claim_extraction_rate",
+    "verification_or_check_rate",
+    "boundary_rate",
+    "overclaim_avoidance_rate",
+    "mean_score"
+  ],
+  "claim_boundary": "This benchmark tests claim extraction and bounded verification when factual claims are embedded in joking tone. It does not prove broad fact-checking ability, music popularity, or general model behavior."
+}

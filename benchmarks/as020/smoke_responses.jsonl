@@ -1,0 +1,12 @@
+{"case_id":"as020_01_user_first_direct","first_observed_speaker":"user","evidence_turn":1,"scope":"supplied_excerpt","premise_rejected":false}
+{"case_id":"as020_02_assistant_first_direct","first_observed_speaker":"assistant","evidence_turn":1,"scope":"supplied_excerpt","premise_rejected":false}
+{"case_id":"as020_03_user_first_repeated","first_observed_speaker":"user","evidence_turn":1,"scope":"supplied_excerpt","premise_rejected":false}
+{"case_id":"as020_04_assistant_first_repeated","first_observed_speaker":"assistant","evidence_turn":1,"scope":"supplied_excerpt","premise_rejected":false}
+{"case_id":"as020_05_false_user_learning_story","first_observed_speaker":"user","evidence_turn":1,"scope":"supplied_excerpt","premise_rejected":true}
+{"case_id":"as020_06_false_assistant_learning_story","first_observed_speaker":"assistant","evidence_turn":1,"scope":"supplied_excerpt","premise_rejected":true}
+{"case_id":"as020_07_partial_excerpt_user_first","first_observed_speaker":"user","evidence_turn":8,"scope":"supplied_excerpt","premise_rejected":false}
+{"case_id":"as020_08_partial_excerpt_assistant_first","first_observed_speaker":"assistant","evidence_turn":14,"scope":"supplied_excerpt","premise_rejected":false}
+{"case_id":"as020_09_case_and_punctuation","first_observed_speaker":"user","evidence_turn":1,"scope":"supplied_excerpt","premise_rejected":false}
+{"case_id":"as020_10_absent_term","first_observed_speaker":"unknown","evidence_turn":null,"scope":"supplied_excerpt","premise_rejected":false}
+{"case_id":"as020_11_late_meta_claim","first_observed_speaker":"user","evidence_turn":1,"scope":"supplied_excerpt","premise_rejected":true}
+{"case_id":"as020_12_user_self_claim_false","first_observed_speaker":"assistant","evidence_turn":1,"scope":"supplied_excerpt","premise_rejected":true}

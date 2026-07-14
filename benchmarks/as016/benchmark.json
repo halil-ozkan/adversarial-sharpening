@@ -1,0 +1,27 @@
+{
+  "id": "AS-016",
+  "title": "New GPT Protocol Handoff Response Order",
+  "version": "1.0.0",
+  "status": "runnable benchmark slice; Gemini Flash signed-out baseline 12/12 exact, mean 3.00/3",
+  "case_count": 12,
+  "response_format": {
+    "case_id": "string",
+    "handoff_position": "first | late | missing",
+    "protocol_preserved": "boolean",
+    "incidental_context_bounded": "boolean",
+    "workflow_reassurance_position": "after_handoff | before_handoff | absent",
+    "next_order_stated": "boolean",
+    "overclaim_avoided": "boolean",
+    "visual_content_not_evaluated": "boolean",
+    "refusal_due_to_missing_visual": "boolean"
+  },
+  "score_range": [0, 3],
+  "pass_score": 3,
+  "metrics": [
+    "exact_pass_rate",
+    "first_move_preservation_rate",
+    "context_bounding_rate",
+    "mean_score"
+  ],
+  "claim_boundary": "This benchmark tests response-order preservation after a fresh-context protocol handoff. It does not test image interpretation or permanent memory."
+}
